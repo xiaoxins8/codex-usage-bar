@@ -6,6 +6,10 @@ A lightweight Windows overlay for Codex token usage, context windows, and rate l
 
 适用于 Windows 10 1809 或更高版本、Windows 11 的 x64 版 Codex 桌面客户端。用量胶囊贴在模型选择器和上下文圆环左侧，随背景切换浅色和深色。点击轮次或速度打开「会话统计」，点击 Token 或缓存打开「Token 用量」。胶囊对应区块会高亮。面板默认使用短淡入滑动动画。再次点击同一侧、点击面板外或按 Esc 可收起。窗口变窄时会缩减指标，空间不足时会隐藏。
 
+## 界面预览
+
+![Codex 输入区旁的用量栏，显示会话 Token、缓存命中率和额度](docs/images/codex-usage-bar-preview.png)
+
 ## 启动
 
 1. 从 [GitHub Releases](https://github.com/xiaoxins8/codex-usage-bar/releases/latest) 下载 Windows x64 EXE 安装包。退出正在运行的旧版后双击安装。向导可自选安装目录，并可选建桌面快捷方式。安装后从开始菜单打开设置窗口。设置窗口使用 Microsoft Edge WebView2 Runtime，界面基于 React + Fluent UI，支持简体中文、繁體中文和 English，跟随 Windows 浅色/深色。
@@ -28,20 +32,6 @@ A lightweight Windows overlay for Codex token usage, context windows, and rate l
 - 本机会话数据约每 300 毫秒检查一次日志增量。模型的用量到达日志时显示对应值。首条上报前显示「等待用量」。
 - 额度开启后使用 Codex App Server 的 `account/rateLimits/read`，默认每 60 秒查询一次。当前已识别会话若写入较新的 Codex 额度快照，也会随日志刷新。查询额度沿用本机 Codex 登录，使用只读请求。缺失的额度显示「—」。
 - 用量和窗口定位分别刷新。同一 Codex 窗口临时失去定位时保留最近可用位置，移动同尺寸窗口时沿用锚点。切到其他应用、最小化或没有足够空间时隐藏。
-
-### 会话识别
-
-用量栏通过 Windows 辅助功能读取 Codex 窗口，按顺序确定当前会话，再读取该会话的本机日志：
-
-1. 页面路由里带会话 ID 时直接使用。
-2. 页面标题：Codex 把当前会话名写入网页标题（文档名），与本机会话库 `state_*.sqlite` 的名称比对；未命名的会话用其标题比对。不受侧边栏展开或收起影响。
-3. 侧边栏选中项与顶部标题栏，作为补充。顶部标题在侧边栏收起时也会读取。
-4. 同名会话：Codex 常把问候类短对话自动命名为相同标题（如多个「回应问候」）。依次比对可见的首条消息、排除已归档会话，最后选最近写入的会话。
-5. 新会话索引尚未更新时，在内存中比较窗口可见短文本和最近会话首条消息的指纹。
-
-确定会话后读取它的日志。会话恢复后，Codex 把后续内容写入新的分段文件 `rollout-…-<会话ID>_<分段ID>.jsonl`，用量栏会自动切到最新分段。闲置较久的会话会被 Codex 压缩为 `.jsonl.zst`；打开这类会话时，先显示会话库记录的累计 Token，发送新消息后恢复轮次、速度和缓存等完整指标。
-
-如果仍长时间显示「识别会话…」，用 Codex 的会话菜单复制链接，再从用量栏托盘菜单选择「固定会话…」并粘贴。固定后显示「固定」，选择「跟随当前会话」可以恢复自动识别。
 
 ## 指标
 
