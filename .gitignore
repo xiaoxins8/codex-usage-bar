@@ -1,0 +1,10 @@
+node_modules/
+*.exe
+*.pdb
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+settings.bundle.html
+/outputs/
+/work/

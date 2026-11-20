@@ -1,0 +1,23 @@
+{
+  "name": "codex-usage-bar-settings",
+  "private": true,
+  "version": "0.6.2",
+  "description": "React settings panel for Codex 用量栏, bundled into ui/settings.js and embedded in CodexUsageBar.exe.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "preview": "node serve.mjs"
+  },
+  "dependencies": {
+    "@fluentui/react-components": "9.75.1",
+    "@fluentui/react-icons": "2.0.345",
+    "i18next": "26.7.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-i18next": "17.1.12"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

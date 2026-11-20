@@ -1,0 +1,188 @@
+{
+  "app": {
+    "name": "Codex 用量列",
+    "tagline": "控制中心",
+    "version": "版本 {{version}}",
+    "loading": "正在連線用量列…"
+  },
+  "nav": {
+    "label": "設定導覽",
+    "overview": "概覽",
+    "placement": "外觀與位置",
+    "quota": "帳號額度",
+    "general": "一般"
+  },
+  "page": {
+    "overview": "目前對話的即時用量，與輸入區膠囊同步更新。",
+    "placement": "調整用量膠囊在 Codex 輸入區中的位置。預覽依實際尺寸等比縮放。",
+    "quota": "在膠囊中顯示 ChatGPT 帳號的五小時與每週剩餘額度。",
+    "general": "設定啟動方式與介面語言。"
+  },
+  "live": {
+    "following": "跟隨目前對話",
+    "pinned": "已固定對話",
+    "identifying": "辨識對話…",
+    "waiting": "等待用量",
+    "demo": "範例資料",
+    "noSession": "尚未辨識到對話",
+    "updatedAt": "更新於 {{time}}",
+    "sourceLive": "即時",
+    "sourceSample": "範例",
+    "sampleHint": "切回 Codex 開啟對話後顯示即時資料",
+    "running": "進行中"
+  },
+  "preview": {
+    "label": "輸入區預覽",
+    "placeholder": "和 Codex 一起工作",
+    "approve": "幫我核准",
+    "model": "模型 · 高",
+    "guides": "顯示可用區域",
+    "actualSize": "實際內容（放大顯示，滑過查看各段含義）",
+    "density": "空間不足時依序收起：輪次 → 速度 → 快取 → 額度",
+    "segments": "膠囊內容",
+    "segRounds": "輪次 · 步數",
+    "segSpeed": "輸出速度",
+    "segTokens": "累計 Token",
+    "segCache": "快取命中",
+    "segQuota": "帳號額度",
+    "area": "可用區域",
+    "dimension": "寬 {{w}} · 高 {{h}}",
+    "modelFallback": "模型"
+  },
+  "stats": {
+    "total": "累計 Token",
+    "totalHint": "對話最後一次回報",
+    "cache": "快取命中",
+    "cacheHint": "{{cached}} 快取 / {{input}} 輸入",
+    "speed": "輸出速度",
+    "speedUnit": "tok/s",
+    "speedHint": "最近一輪，含工具耗時",
+    "rounds": "輪次",
+    "roundsValue": "{{rounds}} 輪 · {{steps}} 步",
+    "roundsHint": "最近一輪的模型回報次數",
+    "breakdown": "Token 明細",
+    "uncached": "未快取輸入",
+    "cachedRead": "快取讀取",
+    "output": "輸出",
+    "turn": "輪次耗時",
+    "ttft": "首 Token",
+    "roundsUnit": "輪",
+    "stepsHint": "最近一輪 {{steps}} 步模型回報",
+    "secondUnit": "秒"
+  },
+  "overview": {
+    "session": "目前對話",
+    "quota": "帳號額度",
+    "quotaOff": "未開啟額度顯示",
+    "enableQuota": "前往開啟",
+    "openPlacement": "調整位置",
+    "position": "在輸入區中的位置",
+    "roundStep": "第 {{rounds}} 輪 · {{steps}} 步",
+    "totalNote": "對話累計，最後一次回報 {{exact}} tok",
+    "fiveUsed": "5h 視窗 · 已用 {{value}}",
+    "weekLeft": "本週剩餘 {{value}}",
+    "totalSub": "對話內累計",
+    "freshLegend": "藍色段為未快取輸入與輸出的占比",
+    "freshNote": "未快取輸入與輸出 {{value}} tok"
+  },
+  "placement": {
+    "position": "位置",
+    "alignment": "對齊方式",
+    "alignmentHint": "在輸入區左側按鈕與上下文圓環之間的空白中對齊",
+    "left": "靠左",
+    "center": "置中",
+    "right": "靠右",
+    "offsetX": "水平位移",
+    "offsetXHint": "負值向左 · −240 ~ 240 px",
+    "offsetY": "垂直位移",
+    "offsetYHint": "負值向上 · −32 ~ 24 px",
+    "reset": "重設位置",
+    "note": "膠囊不會越過模型按鈕與上下文圓環；超出範圍時自動貼齊邊緣。",
+    "increase": "增加 1 px",
+    "decrease": "減少 1 px",
+    "dragHint": "拖曳膠囊，或選取後用方向鍵微調（Shift 每次 10 px）"
+  },
+  "quota": {
+    "fiveHour": "五小時額度",
+    "week": "每週額度",
+    "remaining": "剩餘 {{value}}",
+    "remainingLabel": "剩餘額度",
+    "shown": "已在膠囊中顯示",
+    "resets": "{{time}} 重設",
+    "noData": "暫無資料",
+    "off": "關閉後不發出查詢",
+    "pending": "套用設定後開始查詢",
+    "source": "資料來源",
+    "sourceValue": "Codex App Server · 每 60 秒一次唯讀查詢",
+    "status": "狀態",
+    "waiting": "等待額度資料",
+    "refresh": "立即重新整理",
+    "refreshing": "重新整理中…",
+    "updated": "更新於 {{time}} · {{source}}",
+    "usedShare": "已用 {{value}}",
+    "fromLog": "對話日誌"
+  },
+  "general": {
+    "startupGroup": "啟動",
+    "startup": "登入 Windows 時啟動",
+    "startupDesc": "於背景啟動並常駐系統匣。啟用前請把程式放在固定位置。",
+    "startupUnavailable": "目前無法讀取 Windows 啟動項目",
+    "languageGroup": "語言",
+    "language": "介面語言",
+    "languageDesc": "僅影響此設定視窗；輸入區膠囊維持簡體中文標籤。",
+    "privacy": "隱私",
+    "privacyText": "只讀取本機 CODEX_HOME 下的對話庫與日誌，所有計算都在本機完成。額度查詢沿用本機 Codex 登入，只發出唯讀請求。",
+    "about": "關於",
+    "aboutText": "Codex 用量列 · Windows x64 · 適用於 Codex 桌面用戶端",
+    "logPath": "設定頁日誌：%LOCALAPPDATA%\\CodexUsageBar\\settings-ui.log"
+  },
+  "actions": {
+    "apply": "套用設定",
+    "applying": "正在套用…",
+    "discard": "捨棄變更",
+    "dirty_one": "{{count}} 項變更未套用",
+    "dirty_other": "{{count}} 項變更未套用",
+    "clean": "所有變更已套用",
+    "shortcut": "Ctrl + S 套用",
+    "previewOnly": "瀏覽器預覽模式，設定不會儲存"
+  },
+  "notice": {
+    "saved": "設定已儲存，切回 Codex 查看。",
+    "saveFailed": "無法儲存設定，請檢查本機目錄權限。",
+    "startupPath": "自動啟動未儲存，請把程式移到較短的路徑。",
+    "startupFailed": "其他設定已儲存，Windows 自動啟動更新失敗。",
+    "previewApplied": "預覽設定已套用。"
+  },
+  "language": {
+    "system": "跟隨系統",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "en": "English"
+  },
+  "side": {
+    "listening": "監聽中",
+    "away": "Codex 不在前景",
+    "comeBack": "等你切回視窗"
+  },
+  "top": {
+    "live": "即時 · 約每 0.3 秒讀取",
+    "paused": "已暫停 · 等你切回 Codex",
+    "sample": "範例資料"
+  },
+  "rail": {
+    "drag": "拖曳調整水平位置"
+  },
+  "title": {
+    "minimize": "最小化",
+    "maximize": "最大化",
+    "restore": "還原",
+    "close": "關閉"
+  },
+  "effort": {
+    "minimal": "最低",
+    "low": "低",
+    "medium": "中",
+    "high": "高",
+    "xhigh": "極高"
+  }
+}

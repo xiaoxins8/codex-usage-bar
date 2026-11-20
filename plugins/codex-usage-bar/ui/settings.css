@@ -1,0 +1,18 @@
+/* Global reset only. Component styles come from Fluent UI (Griffel) in ui-src/src. */
+:root { color-scheme: light dark; }
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font: 14px/1.45 'Segoe UI Variable Text', 'Segoe UI', 'Microsoft YaHei UI', system-ui, sans-serif;
+  background: #f6f6f9;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+@media (prefers-color-scheme: dark) { body { background: #1f1f1f; } }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: rgba(128, 128, 140, .35); border-radius: 10px; border: 3px solid transparent; background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { background-color: rgba(128, 128, 140, .55); }
+::-webkit-scrollbar-track { background: transparent; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 1ms !important; }
+}

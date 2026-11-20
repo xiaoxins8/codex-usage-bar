@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Codex 用量栏</title>
+  <style>/* SETTINGS_CSS */</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    // Reports startup errors to the host (settings-ui.log and the fallback window).
+    (function () {
+      var host = window.chrome && window.chrome.webview
+      function report(text) { try { host && host.postMessage({ type: 'page-error', message: String(text).slice(0, 300) }) } catch (e) {} }
+      window.addEventListener('error', function (e) { report((e.message || e) + ' @' + (e.lineno || 0) + ':' + (e.colno || 0)) })
+      window.addEventListener('unhandledrejection', function (e) { report('promise: ' + (e.reason && e.reason.message || e.reason)) })
+    })()
+  </script>
+  <!-- ui/settings.js: React + Fluent UI + i18next bundle built from ui-src (npm run build). -->
+  <script>/* SETTINGS_APP */</script>
+</body>
+</html>

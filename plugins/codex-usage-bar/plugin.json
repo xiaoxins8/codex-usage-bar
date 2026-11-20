@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codex-usage-bar",
+  "version": "0.6.2",
+  "description": "在 Windows Codex 输入区模型按钮左侧显示本机会话用量。",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Codex 用量栏",
+        "shortDescription": "显示上下文窗口、会话 Token 和缓存命中率",
+        "longDescription": "在模型选择器左侧显示本机会话用量，可在 React 设置窗口开启五小时及周额度，调整位置、启动行为和详情面板动画。",
+        "category": "Productivity"
+      }
+    }
+  }
+}

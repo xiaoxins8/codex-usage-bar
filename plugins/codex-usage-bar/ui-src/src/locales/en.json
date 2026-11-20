@@ -1,0 +1,188 @@
+{
+  "app": {
+    "name": "Codex Usage Bar",
+    "tagline": "Control center",
+    "version": "Version {{version}}",
+    "loading": "Connecting to the usage bar…"
+  },
+  "nav": {
+    "label": "Settings navigation",
+    "overview": "Overview",
+    "placement": "Appearance & position",
+    "quota": "Account limits",
+    "general": "General"
+  },
+  "page": {
+    "overview": "Live usage for the current conversation, in sync with the capsule in the composer.",
+    "placement": "Choose where the usage capsule sits in the Codex composer. The preview is drawn to scale.",
+    "quota": "Show your ChatGPT account's remaining 5-hour and weekly limits in the capsule.",
+    "general": "Choose how the app starts and which language it uses."
+  },
+  "live": {
+    "following": "Following current chat",
+    "pinned": "Pinned chat",
+    "identifying": "Identifying chat…",
+    "waiting": "Waiting for usage",
+    "demo": "Sample data",
+    "noSession": "No conversation recognized yet",
+    "updatedAt": "Updated {{time}}",
+    "sourceLive": "Live",
+    "sourceSample": "Sample",
+    "sampleHint": "Switch to Codex and open a chat to see live data",
+    "running": "In progress"
+  },
+  "preview": {
+    "label": "Composer preview",
+    "placeholder": "Work with Codex",
+    "approve": "Auto-approve",
+    "model": "Model · High",
+    "guides": "Show available area",
+    "actualSize": "Capsule contents (enlarged; hover a segment for its meaning)",
+    "density": "When space runs out, segments fold in order: rounds → speed → cache → limits",
+    "segments": "Capsule contents",
+    "segRounds": "Rounds · steps",
+    "segSpeed": "Output speed",
+    "segTokens": "Total tokens",
+    "segCache": "Cache hit rate",
+    "segQuota": "Account limits",
+    "area": "Available area",
+    "dimension": "W {{w}} · H {{h}}",
+    "modelFallback": "Model"
+  },
+  "stats": {
+    "total": "Total tokens",
+    "totalHint": "Last report for this chat",
+    "cache": "Cache hit rate",
+    "cacheHint": "{{cached}} cached / {{input}} input",
+    "speed": "Output speed",
+    "speedUnit": "tok/s",
+    "speedHint": "Latest round, including tool time",
+    "rounds": "Rounds",
+    "roundsValue": "{{rounds}} rounds · {{steps}} steps",
+    "roundsHint": "Model reports in the latest round",
+    "breakdown": "Token breakdown",
+    "uncached": "Uncached input",
+    "cachedRead": "Cache reads",
+    "output": "Output",
+    "turn": "Round time",
+    "ttft": "First token",
+    "roundsUnit": "rounds",
+    "stepsHint": "{{steps}} model reports in the latest round",
+    "secondUnit": "s"
+  },
+  "overview": {
+    "session": "Current chat",
+    "quota": "Account limits",
+    "quotaOff": "Limit display is off",
+    "enableQuota": "Turn on",
+    "openPlacement": "Adjust position",
+    "position": "Position in the composer",
+    "roundStep": "Round {{rounds}} · {{steps}} steps",
+    "totalNote": "Session total, last reported {{exact}} tok",
+    "fiveUsed": "5h window · {{value}} used",
+    "weekLeft": "{{value}} left this week",
+    "totalSub": "This chat so far",
+    "freshLegend": "Blue segments: share of uncached input and output",
+    "freshNote": "Uncached input and output {{value}} tok"
+  },
+  "placement": {
+    "position": "Position",
+    "alignment": "Alignment",
+    "alignmentHint": "Aligned within the gap between the composer's left buttons and the context ring",
+    "left": "Left",
+    "center": "Center",
+    "right": "Right",
+    "offsetX": "Horizontal offset",
+    "offsetXHint": "Negative moves left · −240 to 240 px",
+    "offsetY": "Vertical offset",
+    "offsetYHint": "Negative moves up · −32 to 24 px",
+    "reset": "Reset position",
+    "note": "The capsule never crosses the model button or context ring; out-of-range offsets snap to the edge.",
+    "increase": "Increase by 1 px",
+    "decrease": "Decrease by 1 px",
+    "dragHint": "Drag the capsule, or select it and use the arrow keys (Shift for 10 px)"
+  },
+  "quota": {
+    "fiveHour": "5-hour limit",
+    "week": "Weekly limit",
+    "remaining": "{{value}} left",
+    "remainingLabel": "Remaining",
+    "shown": "Shown in the capsule",
+    "resets": "Resets {{time}}",
+    "noData": "No data yet",
+    "off": "No requests are made while off",
+    "pending": "Querying starts after you apply",
+    "source": "Source",
+    "sourceValue": "Codex App Server · read-only query every 60 s",
+    "status": "Status",
+    "waiting": "Waiting for limit data",
+    "refresh": "Refresh now",
+    "refreshing": "Refreshing…",
+    "updated": "Updated {{time}} · {{source}}",
+    "usedShare": "{{value}} used",
+    "fromLog": "chat log"
+  },
+  "general": {
+    "startupGroup": "Startup",
+    "startup": "Start when I sign in to Windows",
+    "startupDesc": "Starts in the background and stays in the tray. Keep the app in a fixed folder first.",
+    "startupUnavailable": "Windows startup entries can't be read right now",
+    "languageGroup": "Language",
+    "language": "Display language",
+    "languageDesc": "Applies to this settings window only; the composer capsule keeps its Chinese labels.",
+    "privacy": "Privacy",
+    "privacyText": "Only the chat database and logs under your local CODEX_HOME are read, and everything is computed on this PC. Limit queries reuse your local Codex sign-in and are read-only.",
+    "about": "About",
+    "aboutText": "Codex Usage Bar · Windows x64 · for the Codex desktop app",
+    "logPath": "Settings log: %LOCALAPPDATA%\\CodexUsageBar\\settings-ui.log"
+  },
+  "actions": {
+    "apply": "Apply",
+    "applying": "Applying…",
+    "discard": "Discard",
+    "dirty_one": "{{count}} unapplied change",
+    "dirty_other": "{{count}} unapplied changes",
+    "clean": "All changes applied",
+    "shortcut": "Ctrl + S to apply",
+    "previewOnly": "Browser preview — settings are not saved"
+  },
+  "notice": {
+    "saved": "Settings saved. Switch back to Codex to see them.",
+    "saveFailed": "Settings couldn't be saved. Check folder permissions.",
+    "startupPath": "Startup wasn't saved. Move the app to a shorter path.",
+    "startupFailed": "Other settings were saved, but the Windows startup entry couldn't be updated.",
+    "previewApplied": "Preview settings applied."
+  },
+  "language": {
+    "system": "Match Windows",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "en": "English"
+  },
+  "side": {
+    "listening": "Listening",
+    "away": "Codex is in the background",
+    "comeBack": "Waiting for you to switch back"
+  },
+  "top": {
+    "live": "Live · read about every 0.3 s",
+    "paused": "Paused · switch back to Codex",
+    "sample": "Sample data"
+  },
+  "rail": {
+    "drag": "Drag to set the horizontal position"
+  },
+  "title": {
+    "minimize": "Minimize",
+    "maximize": "Maximize",
+    "restore": "Restore down",
+    "close": "Close"
+  },
+  "effort": {
+    "minimal": "Minimal",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "xhigh": "Extra high"
+  }
+}
